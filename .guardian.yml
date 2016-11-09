@@ -1,0 +1,14 @@
+files: ./**/*.cr
+run: crystal build ./src/crayon.cr
+---
+files: ./**/*.cr
+run: crystal tool format ./src
+---
+files: ./**/*.cr
+run: crystal doc
+---
+files: ./**/*.cr
+run: crystal spec
+---
+files: ./shard.yml
+run: crystal deps
