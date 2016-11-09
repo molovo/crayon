@@ -22,7 +22,7 @@ dependencies:
 
 ## Usage
 
-Once instantiated, the Graphite class becomes a re-usable string rendering tool. It comes with a number of methods for styling the foreground color, background color and style of a string using ANSI escape codes.
+Once instantiated, the `Crayon::Text` class becomes a re-usable string rendering tool. It comes with a number of methods for styling the foreground color, background color and style of a string using ANSI escape codes.
 
 ```crystal
 puts crayon.red("This is a red string")
