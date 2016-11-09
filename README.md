@@ -1,5 +1,7 @@
 # crayon
 
+[![Build Status](https://travis-ci.org/molovo/crayon.svg?branch=master)](https://travis-ci.org/molovo/crayon)
+
 A collection of helpers for building pretty command-line tools in [Crystal](http://crystal-lang.org).
 
 ```crystal
