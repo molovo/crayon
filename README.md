@@ -1,5 +1,6 @@
 # crayon
 
+[![GitHub version](https://badge.fury.io/gh/molovo%2Fcrayon.svg)](https://badge.fury.io/gh/molovo%2Fcrayon)
 [![Build Status](https://travis-ci.org/molovo/crayon.svg?branch=master)](https://travis-ci.org/molovo/crayon)
 
 A collection of helpers for building pretty command-line tools in [Crystal](http://crystal-lang.org).
