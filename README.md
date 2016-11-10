@@ -2,6 +2,7 @@
 
 [![GitHub version](https://badge.fury.io/gh/molovo%2Fcrayon.svg)](https://badge.fury.io/gh/molovo%2Fcrayon)
 [![Build Status](https://travis-ci.org/molovo/crayon.svg?branch=master)](https://travis-ci.org/molovo/crayon)
+[![Join the chat at https://gitter.im/molovo/crayon](https://badges.gitter.im/molovo/crayon.svg)](https://gitter.im/molovo/crayon?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 A collection of helpers for building pretty command-line tools in [Crystal](http://crystal-lang.org).
 
