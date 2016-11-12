@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/molovo/crayon">
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../js/doc.js"></script>
+  <title>Crayon::Box - github.com/molovo/crayon</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="github.com/molovo/crayon/Crayon" data-name="crayon">
+      <a href="../Crayon.html">Crayon</a>
+      
+        <ul>
+  
+  <li class="parent current" data-id="github.com/molovo/crayon/Crayon/Box" data-name="crayon::box">
+      <a href="../Crayon/Box.html">Box</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/molovo/crayon/Crayon/Box/Style" data-name="crayon::box::style">
+      <a href="../Crayon/Box/Style.html">Style</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/molovo/crayon/Crayon/Color" data-name="crayon::color">
+      <a href="../Crayon/Color.html">Color</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/molovo/crayon/Crayon/Style" data-name="crayon::style">
+      <a href="../Crayon/Style.html">Style</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/molovo/crayon/Crayon/Text" data-name="crayon::text">
+      <a href="../Crayon/Text.html">Text</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Crayon::Box
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Crayon/Box.html">Crayon::Box</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/box.cr#L2" target="_blank">crayon/box.cr</a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>Constant Summary</h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="STYLES">
+        <strong>STYLES</strong> = <code>[{<span class="n">:bottom_left</span> => <span class="s">&quot;&quot;</span>, <span class="n">:bottom_right</span> => <span class="s">&quot;&quot;</span>, <span class="n">:horizontal</span> => <span class="s">&quot;&quot;</span>, <span class="n">:top_left</span> => <span class="s">&quot;&quot;</span>, <span class="n">:top_right</span> => <span class="s">&quot;&quot;</span>, <span class="n">:vertical</span> => <span class="s">&quot;&quot;</span>}, {<span class="n">:bottom_left</span> => <span class="s">'└'</span>, <span class="n">:bottom_right</span> => <span class="s">'┘'</span>, <span class="n">:horizontal</span> => <span class="s">'─'</span>, <span class="n">:top_left</span> => <span class="s">'┌'</span>, <span class="n">:top_right</span> => <span class="s">'┐'</span>, <span class="n">:vertical</span> => <span class="s">'│'</span>}, {<span class="n">:bottom_left</span> => <span class="s">'╚'</span>, <span class="n">:bottom_right</span> => <span class="s">'╝'</span>, <span class="n">:horizontal</span> => <span class="s">'═'</span>, <span class="n">:top_left</span> => <span class="s">'╔'</span>, <span class="n">:top_right</span> => <span class="s">'╗'</span>, <span class="n">:vertical</span> => <span class="s">'║'</span>}, {<span class="n">:bottom_left</span> => <span class="s">'╰'</span>, <span class="n">:bottom_right</span> => <span class="s">'╯'</span>, <span class="n">:horizontal</span> => <span class="s">'─'</span>, <span class="n">:top_left</span> => <span class="s">'╭'</span>, <span class="n">:top_right</span> => <span class="s">'╮'</span>, <span class="n">:vertical</span> => <span class="s">'│'</span>}, {<span class="n">:bottom_left</span> => <span class="s">'╙'</span>, <span class="n">:bottom_right</span> => <span class="s">'╜'</span>, <span class="n">:horizontal</span> => <span class="s">'─'</span>, <span class="n">:top_left</span> => <span class="s">'╓'</span>, <span class="n">:top_right</span> => <span class="s">'╖'</span>, <span class="n">:vertical</span> => <span class="s">'║'</span>}, {<span class="n">:bottom_left</span> => <span class="s">'╘'</span>, <span class="n">:bottom_right</span> => <span class="s">'╛'</span>, <span class="n">:horizontal</span> => <span class="s">'═'</span>, <span class="n">:top_left</span> => <span class="s">'╒'</span>, <span class="n">:top_right</span> => <span class="s">'╕'</span>, <span class="n">:vertical</span> => <span class="s">'│'</span>}, {<span class="n">:bottom_left</span> => <span class="s">'+'</span>, <span class="n">:bottom_right</span> => <span class="s">'+'</span>, <span class="n">:horizontal</span> => <span class="s">'-'</span>, <span class="n">:top_left</span> => <span class="s">'+'</span>, <span class="n">:top_right</span> => <span class="s">'+'</span>, <span class="n">:vertical</span> => <span class="s">'|'</span>}]</code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+  <h2>Class Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28content%3AString%7CArray%28String%29%29-class-method" class="signature"><strong>.new</strong>(content : String | Array(String))</a>
+        
+          <div class="summary"><p>Create the box</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#render%3AString-instance-method" class="signature"><strong>#render</strong> : String</a>
+        
+          <div class="summary"><p>Return the rendered box as a string</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_border_color%28color%3AColor%29%3Aself-instance-method" class="signature"><strong>#set_border_color</strong>(color : Color) : self</a>
+        
+          <div class="summary"><p>Set the border color</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_border_style%28style%3AStyle%29%3Aself-instance-method" class="signature"><strong>#set_border_style</strong>(style : Style) : self</a>
+        
+          <div class="summary"><p>Set the border style</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_margin%28x%3AInt32%2Cy%3AInt32%29%3Aself-instance-method" class="signature"><strong>#set_margin</strong>(x : Int32, y : Int32) : self</a>
+        
+          <div class="summary"><p>Set the external margin of the box</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_padding%28x%3AInt32%2Cy%3AInt32%29%3Aself-instance-method" class="signature"><strong>#set_padding</strong>(x : Int32, y : Int32) : self</a>
+        
+          <div class="summary"><p>Set the internal padding of the box</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_title%28title%3AString%29%3Aself-instance-method" class="signature"><strong>#set_title</strong>(title : String) : self</a>
+        
+          <div class="summary"><p>Set the title of the box</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Class Method Detail</h2>
+  
+    <div class="entry-detail" id="new&#40;content:String|Array&#40;String&#41;&#41;-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(content : String | Array(String))
+
+        <a class="method-permalink" href="#new%28content%3AString%7CArray%28String%29%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Create the box</p>
+
+<pre><code>box <span class="o">=</span> <span class="t">Crayon</span><span class="t">::</span><span class="t">Box</span>.<span class="k">new</span>(<span class="s">&quot;Rainbows&#33;&quot;</span>)
+puts box.render
+<span class="c"># ┌─────────┐</span>
+<span class="c"># │Rainbows&#33;│</span>
+<span class="c"># └─────────┘</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/box.cr#L106" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="render:String-instance-method">
+      <div class="signature">
+        
+        def <strong>render</strong> : String
+
+        <a class="method-permalink" href="#render%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Return the rendered box as a string</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/box.cr#L111" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_border_color&#40;color:Color&#41;:self-instance-method">
+      <div class="signature">
+        
+        def <strong>set_border_color</strong>(color : <a href="../Crayon/Color.html">Color</a>) : self
+
+        <a class="method-permalink" href="#set_border_color%28color%3AColor%29%3Aself-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the border color</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/box.cr#L137" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_border_style&#40;style:Style&#41;:self-instance-method">
+      <div class="signature">
+        
+        def <strong>set_border_style</strong>(style : <a href="../Crayon/Box/Style.html">Style</a>) : self
+
+        <a class="method-permalink" href="#set_border_style%28style%3AStyle%29%3Aself-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the border style</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/box.cr#L144" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_margin&#40;x:Int32,y:Int32&#41;:self-instance-method">
+      <div class="signature">
+        
+        def <strong>set_margin</strong>(x : Int32, y : Int32) : self
+
+        <a class="method-permalink" href="#set_margin%28x%3AInt32%2Cy%3AInt32%29%3Aself-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the external margin of the box</p>
+
+<p><em>x</em> is the number of empty lines above and below
+<em>y</em> is the number of spaces to the left and right</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/box.cr#L154" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_padding&#40;x:Int32,y:Int32&#41;:self-instance-method">
+      <div class="signature">
+        
+        def <strong>set_padding</strong>(x : Int32, y : Int32) : self
+
+        <a class="method-permalink" href="#set_padding%28x%3AInt32%2Cy%3AInt32%29%3Aself-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the internal padding of the box</p>
+
+<p><em>x</em> is the number of empty lines above and below
+<em>y</em> is the number of spaces to the left and right</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/box.cr#L167" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_title&#40;title:String&#41;:self-instance-method">
+      <div class="signature">
+        
+        def <strong>set_title</strong>(title : String) : self
+
+        <a class="method-permalink" href="#set_title%28title%3AString%29%3Aself-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the title of the box</p>
+
+<pre><code>box <span class="o">=</span> <span class="t">Crayon</span><span class="t">::</span><span class="t">Box</span>.<span class="k">new</span>(<span class="s">&quot;I believe in unicorns&#33;&quot;</span>)
+box.set_title(<span class="s">&quot;Title&quot;</span>)
+puts box.render
+<span class="c"># ┌ Title ───────────────┐</span>
+<span class="c"># │I believe in unicorns&#33;│</span>
+<span class="c"># └──────────────────────┘</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/box.cr#L130" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

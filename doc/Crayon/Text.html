@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/molovo/crayon">
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../js/doc.js"></script>
+  <title>Crayon::Text - github.com/molovo/crayon</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="github.com/molovo/crayon/Crayon" data-name="crayon">
+      <a href="../Crayon.html">Crayon</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/molovo/crayon/Crayon/Box" data-name="crayon::box">
+      <a href="../Crayon/Box.html">Box</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/molovo/crayon/Crayon/Box/Style" data-name="crayon::box::style">
+      <a href="../Crayon/Box/Style.html">Style</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/molovo/crayon/Crayon/Color" data-name="crayon::color">
+      <a href="../Crayon/Color.html">Color</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/molovo/crayon/Crayon/Style" data-name="crayon::style">
+      <a href="../Crayon/Style.html">Style</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/molovo/crayon/Crayon/Text" data-name="crayon::text">
+      <a href="../Crayon/Text.html">Text</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Crayon::Text
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Crayon/Text.html">Crayon::Text</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L2" target="_blank">crayon/text.cr</a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>Constant Summary</h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="ANSI_END">
+        <strong>ANSI_END</strong> = <code><span class="s">&quot;\e&#91;0;m&quot;</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>ANSI escape codes for the end of the string</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="ANSI_START">
+        <strong>ANSI_START</strong> = <code><span class="s">&quot;\e&#91;&#37;s&#37;s&#37;sm&quot;</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>ANSI escape codes for the start of the string</p>
+      </dd>
+      
+    
+  </dl>
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#black%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#black</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Alias of <code><a href="../Crayon/Text.html#set_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_color(Color::Black, str)</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#blackbg%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#blackbg</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Alias of <code><a href="../Crayon/Text.html#set_bg_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_bg_color(Color::Black, str)</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#blink%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#blink</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Alias of <code><a href="../Crayon/Text.html#set_style%28style%3AStyle%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_style(Style::Blink, str)</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#blue%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#blue</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Alias of <code><a href="../Crayon/Text.html#set_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_color(Color::Blue, str)</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#bluebg%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#bluebg</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Alias of <code><a href="../Crayon/Text.html#set_bg_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_bg_color(Color::Blue, str)</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#bold%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#bold</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Alias of <code><a href="../Crayon/Text.html#set_style%28style%3AStyle%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_style(Style::Bold, str)</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cyan%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#cyan</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Alias of <code><a href="../Crayon/Text.html#set_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_color(Color::Cyan, str)</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cyanbg%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#cyanbg</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Alias of <code><a href="../Crayon/Text.html#set_bg_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_bg_color(Color::Cyan, str)</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#encode%28str%3AString%7CChar%29%3AString-instance-method" class="signature"><strong>#encode</strong>(str : String | Char) : String</a>
+        
+          <div class="summary"><p>Add ANSI escape codes to a string</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#green%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#green</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Alias of <code><a href="../Crayon/Text.html#set_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_color(Color::Green, str)</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#greenbg%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#greenbg</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Alias of <code><a href="../Crayon/Text.html#set_bg_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_bg_color(Color::Green, str)</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#inverse%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#inverse</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Alias of <code><a href="../Crayon/Text.html#set_style%28style%3AStyle%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_style(Style::Inverse, str)</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#italic%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#italic</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Alias of <code><a href="../Crayon/Text.html#set_style%28style%3AStyle%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_style(Style::Italic, str)</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#magenta%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#magenta</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Alias of <code><a href="../Crayon/Text.html#set_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_color(Color::Magenta, str)</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#magentabg%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#magentabg</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Alias of <code><a href="../Crayon/Text.html#set_bg_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_bg_color(Color::Magenta, str)</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#red%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#red</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Alias of <code><a href="../Crayon/Text.html#set_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_color(Color::Red, str)</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#redbg%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#redbg</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Alias of <code><a href="../Crayon/Text.html#set_bg_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_bg_color(Color::Red, str)</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#render%28str%3AString%7CChar%29%3AString-instance-method" class="signature"><strong>#render</strong>(str : String | Char) : String</a>
+        
+          <div class="summary"><p>Render a string with ANSI escape codes added</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#repeat%28char%3AChar%7CString%2Clen%3AInt32%29%3AString-instance-method" class="signature"><strong>#repeat</strong>(char : Char | String, len : Int32) : String</a>
+        
+          <div class="summary"><p>Create a string by repeating the <em>char</em> character <em>len</em> times</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_bg_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#set_bg_color</strong>(color : Color, str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Set the current background color</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#set_color</strong>(color : Color, str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Set the current color</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_style%28style%3AStyle%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#set_style</strong>(style : Style, str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Set the current style</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#strikethrough%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#strikethrough</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Alias of <code><a href="../Crayon/Text.html#set_style%28style%3AStyle%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_style(Style::Strikethrough, str)</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#strip%28str%3AString%7CChar%29%3AString-instance-method" class="signature"><strong>#strip</strong>(str : String | Char) : String</a>
+        
+          <div class="summary"><p>Strip ANSI encoding from a string</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#underline%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#underline</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Alias of <code><a href="../Crayon/Text.html#set_style%28style%3AStyle%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_style(Style::Underline, str)</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#white%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#white</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Alias of <code><a href="../Crayon/Text.html#set_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_color(Color::White, str)</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#whitebg%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#whitebg</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Alias of <code><a href="../Crayon/Text.html#set_bg_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_bg_color(Color::White, str)</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#yellow%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#yellow</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Alias of <code><a href="../Crayon/Text.html#set_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_color(Color::Yellow, str)</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#yellowbg%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method" class="signature"><strong>#yellowbg</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String</a>
+        
+          <div class="summary"><p>Alias of <code><a href="../Crayon/Text.html#set_bg_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_bg_color(Color::Yellow, str)</a></code></p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+  
+</div>
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="black&#40;str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>black</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#black%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Alias of <code><a href="../Crayon/Text.html#set_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_color(Color::Black, str)</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L121" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="blackbg&#40;str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>blackbg</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#blackbg%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Alias of <code><a href="../Crayon/Text.html#set_bg_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_bg_color(Color::Black, str)</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L161" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="blink&#40;str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>blink</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#blink%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Alias of <code><a href="../Crayon/Text.html#set_style%28style%3AStyle%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_style(Style::Blink, str)</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L216" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="blue&#40;str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>blue</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#blue%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Alias of <code><a href="../Crayon/Text.html#set_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_color(Color::Blue, str)</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L141" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="bluebg&#40;str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>bluebg</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#bluebg%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Alias of <code><a href="../Crayon/Text.html#set_bg_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_bg_color(Color::Blue, str)</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L181" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="bold&#40;str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>bold</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#bold%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Alias of <code><a href="../Crayon/Text.html#set_style%28style%3AStyle%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_style(Style::Bold, str)</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L201" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cyan&#40;str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>cyan</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#cyan%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Alias of <code><a href="../Crayon/Text.html#set_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_color(Color::Cyan, str)</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L151" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cyanbg&#40;str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>cyanbg</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#cyanbg%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Alias of <code><a href="../Crayon/Text.html#set_bg_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_bg_color(Color::Cyan, str)</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L191" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="encode&#40;str:String|Char&#41;:String-instance-method">
+      <div class="signature">
+        
+        def <strong>encode</strong>(str : String | Char) : String
+
+        <a class="method-permalink" href="#encode%28str%3AString%7CChar%29%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add ANSI escape codes to a string</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L29" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="green&#40;str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>green</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#green%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Alias of <code><a href="../Crayon/Text.html#set_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_color(Color::Green, str)</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L131" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="greenbg&#40;str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>greenbg</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#greenbg%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Alias of <code><a href="../Crayon/Text.html#set_bg_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_bg_color(Color::Green, str)</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L171" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="inverse&#40;str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>inverse</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#inverse%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Alias of <code><a href="../Crayon/Text.html#set_style%28style%3AStyle%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_style(Style::Inverse, str)</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L221" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="italic&#40;str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>italic</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#italic%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Alias of <code><a href="../Crayon/Text.html#set_style%28style%3AStyle%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_style(Style::Italic, str)</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L206" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="magenta&#40;str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>magenta</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#magenta%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Alias of <code><a href="../Crayon/Text.html#set_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_color(Color::Magenta, str)</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L146" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="magentabg&#40;str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>magentabg</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#magentabg%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Alias of <code><a href="../Crayon/Text.html#set_bg_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_bg_color(Color::Magenta, str)</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L186" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="red&#40;str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>red</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#red%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Alias of <code><a href="../Crayon/Text.html#set_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_color(Color::Red, str)</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L126" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="redbg&#40;str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>redbg</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#redbg%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Alias of <code><a href="../Crayon/Text.html#set_bg_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_bg_color(Color::Red, str)</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L166" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="render&#40;str:String|Char&#41;:String-instance-method">
+      <div class="signature">
+        
+        def <strong>render</strong>(str : String | Char) : String
+
+        <a class="method-permalink" href="#render%28str%3AString%7CChar%29%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Render a string with ANSI escape codes added</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L19" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="repeat&#40;char:Char|String,len:Int32&#41;:String-instance-method">
+      <div class="signature">
+        
+        def <strong>repeat</strong>(char : Char | String, len : Int32) : String
+
+        <a class="method-permalink" href="#repeat%28char%3AChar%7CString%2Clen%3AInt32%29%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Create a string by repeating the <em>char</em> character <em>len</em> times</p>
+
+<pre><code>crayon <span class="o">=</span> <span class="t">Crayon</span><span class="t">::</span><span class="t">Text</span>.<span class="k">new</span>
+puts crayon.repeat(<span class="s">'a'</span>, <span class="n">10</span>)
+=> <span class="s">&quot;aaaaaaaaaa&quot;</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L249" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_bg_color&#40;color:Color,str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>set_bg_color</strong>(color : <a href="../Crayon/Color.html">Color</a>, str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#set_bg_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the current background color</p>
+
+<p>If a string is passed as a second argument, it is encoded
+with the color applied and returned</p>
+
+<pre><code>crayon <span class="o">=</span> <span class="t">Crayon</span><span class="t">::</span><span class="t">Text</span>.<span class="k">new</span>
+puts crayon.set_bg_color(<span class="t">Color</span><span class="t">::</span><span class="t">Black</span>, <span class="s">&quot;string&quot;</span>)
+<span class="c"># &#61;&gt; &quot;\033&#91;0;40mstring\033&#91;0;m&quot;</span></code></pre>
+
+<p>If no second argument is passed, the instance is returned,
+allowing methods to be chained</p>
+
+<pre><code>crayon <span class="o">=</span> <span class="t">Crayon</span><span class="t">::</span><span class="t">Text</span>.<span class="k">new</span>
+puts crayon.set_bg_color(<span class="t">Color</span><span class="t">::</span><span class="t">Black</span>).set_color(<span class="t">Color</span><span class="t">::</span><span class="t">Red</span>, <span class="s">&quot;string&quot;</span>)
+<span class="c"># &#61;&gt; &quot;\033&#91;0;40;31mstring\033&#91;0;m&quot;</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L81" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_color&#40;color:Color,str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>set_color</strong>(color : <a href="../Crayon/Color.html">Color</a>, str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#set_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the current color</p>
+
+<p>If a string is passed as a second argument, it is encoded
+with the color applied and returned</p>
+
+<pre><code>crayon <span class="o">=</span> <span class="t">Crayon</span><span class="t">::</span><span class="t">Text</span>.<span class="k">new</span>
+puts crayon.set_color(<span class="t">Color</span><span class="t">::</span><span class="t">Black</span>, <span class="s">&quot;string&quot;</span>)
+<span class="c"># &#61;&gt; &quot;\033&#91;0;30mstring\033&#91;0;m&quot;</span></code></pre>
+
+<p>If no second argument is passed, the instance is returned,
+allowing methods to be chained</p>
+
+<pre><code>crayon <span class="o">=</span> <span class="t">Crayon</span><span class="t">::</span><span class="t">Text</span>.<span class="k">new</span>
+puts crayon.set_color(<span class="t">Color</span><span class="t">::</span><span class="t">Black</span>).set_bg_color(<span class="t">Color</span><span class="t">::</span><span class="t">Red</span>, <span class="s">&quot;string&quot;</span>)
+<span class="c"># &#61;&gt; &quot;\033&#91;0;41;30mstring\033&#91;0;m&quot;</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L52" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_style&#40;style:Style,str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>set_style</strong>(style : <a href="../Crayon/Style.html">Style</a>, str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#set_style%28style%3AStyle%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the current style</p>
+
+<p>If a string is passed as a second argument, it is encoded
+with the color applied and returned</p>
+
+<pre><code>crayon <span class="o">=</span> <span class="t">Crayon</span><span class="t">::</span><span class="t">Text</span>.<span class="k">new</span>
+puts crayon.set_style(<span class="t">Style</span><span class="t">::</span><span class="t">Bold</span>, <span class="s">&quot;string&quot;</span>)
+<span class="c"># &#61;&gt; &quot;\033&#91;1;mstring\033&#91;0;m&quot;</span></code></pre>
+
+<p>If no second argument is passed, the instance is returned,
+allowing methods to be chained</p>
+
+<pre><code>crayon <span class="o">=</span> <span class="t">Crayon</span><span class="t">::</span><span class="t">Text</span>.<span class="k">new</span>
+puts crayon.set_style(<span class="t">Style</span><span class="t">::</span><span class="t">Bold</span>).set_color(<span class="t">Color</span><span class="t">::</span><span class="t">Red</span>, <span class="s">&quot;string&quot;</span>)
+<span class="c"># &#61;&gt; &quot;\033&#91;0;41;30mstring\033&#91;0;m&quot;</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L110" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="strikethrough&#40;str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>strikethrough</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#strikethrough%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Alias of <code><a href="../Crayon/Text.html#set_style%28style%3AStyle%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_style(Style::Strikethrough, str)</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L226" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="strip&#40;str:String|Char&#41;:String-instance-method">
+      <div class="signature">
+        
+        def <strong>strip</strong>(str : String | Char) : String
+
+        <a class="method-permalink" href="#strip%28str%3AString%7CChar%29%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Strip ANSI encoding from a string</p>
+
+<pre><code>crayon <span class="o">=</span> <span class="t">Crayon</span><span class="t">::</span><span class="t">Text</span>.<span class="k">new</span>
+str    <span class="o">=</span> <span class="s">&quot;\033&#91;0;33mA styled string\033&#91;0;m&quot;</span>
+puts crayon.strip <span class="s">&quot;str&quot;</span>
+=> <span class="s">&quot;A styled string&quot;</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="underline&#40;str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>underline</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#underline%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Alias of <code><a href="../Crayon/Text.html#set_style%28style%3AStyle%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_style(Style::Underline, str)</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L211" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="white&#40;str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>white</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#white%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Alias of <code><a href="../Crayon/Text.html#set_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_color(Color::White, str)</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L156" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="whitebg&#40;str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>whitebg</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#whitebg%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Alias of <code><a href="../Crayon/Text.html#set_bg_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_bg_color(Color::White, str)</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L196" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="yellow&#40;str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>yellow</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#yellow%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Alias of <code><a href="../Crayon/Text.html#set_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_color(Color::Yellow, str)</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L136" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="yellowbg&#40;str:String|Char|Nil&#61;nil&#41;:self|String-instance-method">
+      <div class="signature">
+        
+        def <strong>yellowbg</strong>(str : String | Char | Nil = <span class="n">nil</span>) : self | String
+
+        <a class="method-permalink" href="#yellowbg%28str%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Alias of <code><a href="../Crayon/Text.html#set_bg_color%28color%3AColor%2Cstr%3AString%7CChar%7CNil%3Dnil%29%3Aself%7CString-instance-method">#set_bg_color(Color::Yellow, str)</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/molovo/crayon/blob/69882f0903490d242b314e09dae0743e93d35940/src/crayon/text.cr#L176" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

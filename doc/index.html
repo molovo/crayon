@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/molovo/crayon">
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/doc.js"></script>
+  <title>README - github.com/molovo/crayon</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li class="current"><a href="index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent " data-id="github.com/molovo/crayon/Crayon" data-name="crayon">
+      <a href="Crayon.html">Crayon</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/molovo/crayon/Crayon/Box" data-name="crayon::box">
+      <a href="Crayon/Box.html">Box</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/molovo/crayon/Crayon/Box/Style" data-name="crayon::box::style">
+      <a href="Crayon/Box/Style.html">Style</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/molovo/crayon/Crayon/Color" data-name="crayon::color">
+      <a href="Crayon/Color.html">Color</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/molovo/crayon/Crayon/Style" data-name="crayon::style">
+      <a href="Crayon/Style.html">Style</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/molovo/crayon/Crayon/Text" data-name="crayon::text">
+      <a href="Crayon/Text.html">Text</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1>crayon</h1>
+
+<p><a href="https://badge.fury.io/gh/molovo%2Fcrayon" target="_blank"><img src="https://badge.fury.io/gh/molovo%2Fcrayon.svg" alt="GitHub version"/></a>
+<a href="https://travis-ci.org/molovo/crayon" target="_blank"><img src="https://travis-ci.org/molovo/crayon.svg?branch=master" alt="Build Status"/></a>
+<a href="https://gitter.im/molovo/crayon?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge" target="_blank"><img src="https://badges.gitter.im/molovo/crayon.svg" alt="Join the chat at https://gitter.im/molovo/crayon"/></a></p>
+
+<p>A collection of helpers for building pretty command-line tools in <a href="http://crystal-lang.org" target="_blank">Crystal</a>.</p>
+
+<pre><code class='language-crystal'><span class="k">require</span> <span class="s">&quot;crayon&quot;</span>
+
+crayon <span class="o">=</span> <span class="t">Crayon</span><span class="t">::</span><span class="t">Text</span>.<span class="k">new</span>
+puts crayon.bold.yellow(<span class="s">&quot;I believe in unicorns&#33;&quot;</span>)
+<span class="c"># &#61;&gt; &quot;\033&#91;1;33mI believe in unicorns&#33;\033&#91;0;m&quot;</span></code></pre>
+
+<h2>Installation</h2>
+
+<p>Add this to your application's <code>shard.yml</code>:</p>
+
+<pre><code class='language-yaml'>dependencies:
+  crayon:
+    github: molovo/crayon</code></pre>
+
+<h2>Usage</h2>
+
+<p>Once instantiated, the <code><a href="Crayon/Text.html">Crayon::Text</a></code> class becomes a re-usable string rendering tool. It comes with a number of methods for styling the foreground color, background color and style of a string using ANSI escape codes.</p>
+
+<pre><code class='language-crystal'>puts crayon.red(<span class="s">&quot;This is a red string&quot;</span>)
+<span class="c"># &#61;&gt; &quot;\033&#91;0;31mThis is a red string\033&#91;0;m&quot;</span></code></pre>
+
+<p>When color methods are accessed without arguments, these methods allow chaining of styles. When a string is passed as the first argument, it is returned with all the chained styles applied.</p>
+
+<pre><code class='language-crystal'>puts crayon.red.yellowbg().underline(<span class="s">&quot;A string&quot;</span>)
+<span class="c"># &#61;&gt; &quot;\033&#91;4;31;43mA string\033&#91;0;m&quot;</span></code></pre>
+
+<h3>Available styling methods</h3>
+
+<ul><li><code>black</code></li><li><code>blackbg</code></li><li><code>red</code></li><li><code>redbg</code></li><li><code>green</code></li><li><code>greenbg</code></li><li><code>yellow</code></li><li><code>yellowbg</code></li><li><code>blue</code></li><li><code>bluebg</code></li><li><code>magenta</code></li><li><code>magentabg</code></li><li><code>cyan</code></li><li><code>cyanbg</code></li><li><code>white</code></li><li><code>whitebg</code></li><li><code>bold</code></li><li><code>italic</code></li><li><code>underline</code></li><li><code>blink</code></li><li><code>inverse</code></li><li><code>strikethrough</code></li></ul>
+
+<h3>Additional Methods</h3>
+
+<p>As well as the styling methods above, the following helper methods are available.</p>
+
+<h4><code>strip(str : String) : String</code></h4>
+
+<p>The <code>strip</code> method strips all ANSI escape codes from the passed string and returns it.</p>
+
+<pre><code class='language-crystal'>str <span class="o">=</span> <span class="s">&quot;\033&#91;0;31mA string with ANSI escaping\033&#91;0;m&quot;</span>
+puts crayon.strip(str)
+<span class="c"># &#61;&gt; &quot;A string with ANSI escaping&quot;</span></code></pre>
+
+<h4><code>repeat(char : Char, length : Int32) : String</code></h4>
+
+<p>The <code>repeat</code> method returns a string consisting of the defined <em><code>char</code></em>, repeated <em><code>length</code></em> times.</p>
+
+<pre><code class='language-crystal'>puts crayon.repeat(<span class="s">'+'</span>, <span class="n">5</span>)
+<span class="c"># &#61;&gt; &quot;&#43;&#43;&#43;&#43;&#43;&quot;</span></code></pre>
+
+<h3>Boxes</h3>
+
+<p>The <code><a href="Crayon/Box.html">Crayon::Box</a></code> class adds a border around a string (or an array of strings, where each item is a line).</p>
+
+<pre><code class='language-crystal'>box <span class="o">=</span> <span class="t">Crayon</span><span class="t">::</span><span class="t">Box</span>.<span class="k">new</span>(<span class="s">&quot;Rainbows&#33;&quot;</span>)
+puts box.render
+<span class="c"># ┌─────────┐</span>
+<span class="c"># │Rainbows&#33;│</span>
+<span class="c"># └─────────┘</span></code></pre>
+
+<p>Boxes can be styled in a number of ways.</p>
+
+<pre><code class='language-crystal'>box <span class="o">=</span> <span class="t">Crayon</span><span class="t">::</span><span class="t">Box</span>.<span class="k">new</span>(<span class="s">&quot;Unicorns&#33;&quot;</span>)
+box.set_border_color <span class="t">Crayon</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">White</span>,        <span class="c"># The color of the border &#40;and title&#41;</span>
+box.set_border_style <span class="t">Crayon</span><span class="t">::</span><span class="t">Box</span><span class="t">::</span><span class="t">Style</span><span class="t">::</span><span class="t">Single</span>,  <span class="c"># The border style</span>
+box.set_margin <span class="n">0</span>, <span class="n">0</span>                               <span class="c"># The horizontal and vertical margin</span>
+box.set_padding <span class="n">0</span>, <span class="n">0</span>                               <span class="c"># The horizontal and vertical padding</span></code></pre>
+
+<p>The following styles are available:</p>
+
+<pre><code><span class="t">Crayon</span><span class="t">::</span><span class="t">Box</span><span class="t">::</span><span class="t">Style</span><span class="t">::</span><span class="t">Single</span>
+┌──────────┐
+│The string│
+└──────────┘
+
+<span class="t">Crayon</span><span class="t">::</span><span class="t">Box</span><span class="t">::</span><span class="t">Style</span><span class="t">::</span><span class="t">Double</span>
+╔══════════╗
+║The string║
+╚══════════╝
+
+<span class="t">Crayon</span><span class="t">::</span><span class="t">Box</span><span class="t">::</span><span class="t">Style</span><span class="t">::</span><span class="t">Rounded</span>
+╭──────────╮
+│The string│
+╰──────────╯
+
+<span class="t">Crayon</span><span class="t">::</span><span class="t">Box</span><span class="t">::</span><span class="t">Style</span><span class="t">::</span><span class="t">SingleDouble</span>
+╓──────────╖
+║The string║
+╙──────────╜
+
+<span class="t">Crayon</span><span class="t">::</span><span class="t">Box</span><span class="t">::</span><span class="t">Style</span><span class="t">::</span><span class="t">DoubleSingle</span>
+╒══════════╕
+│The string│
+╘══════════╛
+
+<span class="t">Crayon</span><span class="t">::</span><span class="t">Box</span><span class="t">::</span><span class="t">Style</span><span class="t">::</span><span class="t">Classic</span>
+<span class="o">+</span></code></pre>
+
+<p>You can also use the constant <code><a href="Crayon/Box.html">Crayon::Box</a>::Style::NoBorder</code> to add margin and padding to a string without a border.</p>
+
+<pre><code class='language-crystal'>box <span class="o">=</span> <span class="t">Crayon</span><span class="t">::</span><span class="t">Box</span>.<span class="k">new</span>(<span class="s">&quot;Unicorns and\nrainbows&quot;</span>)
+box.set_border_style <span class="t">Crayon</span><span class="t">::</span><span class="t">Box</span><span class="t">::</span><span class="t">Style</span><span class="t">::</span><span class="t">NoBorder</span>
+box.set_padding <span class="n">2</span>, <span class="n">1</span>
+puts box.render
+<span class="c">#</span>
+<span class="c">#   Unicorns and</span>
+<span class="c">#   rainbows</span>
+<span class="c">#</span></code></pre>
+
+<p>You can also add titles to boxes. These are rendered within the border, in the same color.</p>
+
+<pre><code class='language-php'>box = Crayon::Box.new("The string")
+box.set_padding 1, 0
+box.set_title "My Box"
+puts box.render
+# ┌ My Box ────┐
+# │ The string │
+# └────────────┘</code></pre>
+
+<h2>TODO</h2>
+
+<ul><li>Finish writing specs for <code>Color::Box</code></li><li>Add table renderer</li></ul>
+
+<h2>Contributing</h2>
+
+<ol><li><a href="https://github.com/molovo/crayon/fork" target="_blank">Fork it</a></li><li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li><li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li><li>Push to the branch (<code>git push origin my-new-feature</code>)</li><li>Create a new Pull Request</li></ol>
+
+<h2>Contributors</h2>
+
+<ul><li><a href="https://github.com/molovo" target="_blank">molovo</a> James Dinsdale - creator, maintainer</li></ul>
+
+<h2>Related</h2>
+
+<ul><li><a href="https://github.com/molovo/graphite" target="_blank">Graphite</a> The PHP package that this library was ported from.</li></ul>
+</div>
+</body>
+</html>
